@@ -70,8 +70,6 @@ class Mitake
      */
     protected function request(array $params)
     {
-        $endPointUrl = $this->https ? $this->baseHttpsUrl : $this->baseHttpUrl;
-
         try {
             $formParams = [
                 'username' => $this->username,
@@ -88,7 +86,7 @@ class Mitake
 
             $response = $this->httpClient->request(
                 'POST',
-                $endPointUrl,
+                $this->serviceUrl,
                 [
                     GuzzleHttp\RequestOptions::HEADERS => [
                         'Content-Type' => 'application/x-www-form-urlencoded'
