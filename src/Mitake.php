@@ -108,7 +108,7 @@ class Mitake
      */
     private function setServiceUrl($serviceUrl)
     {
-        $serviceUrl = isset($serviceUrl) ? $serviceUrl : $this->baseUrl;
+        $serviceUrl = !empty($serviceUrl) ? $serviceUrl : $this->baseUrl;
 
         $this->serviceUrl = $serviceUrl . '?CharsetURL=UTF-8';
     }
