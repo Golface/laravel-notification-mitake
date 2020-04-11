@@ -58,25 +58,35 @@ class MitakeMessage
 
     /**
      * @param mixed $to
+     * @return MitakeMessage
      */
     public function to($to)
     {
         $this->to = $to;
+
+        return $this;
     }
 
     /**
-     * @param $vldTime string(YYYYMMDDHHMMSS)|integer(second)
+     * @param $vldTime string|integer
+     *      YYYYMMDDHHMMSS | second
+     * @return MitakeMessage
      */
     public function vldTime($vldTime)
     {
         $this->vldTime = $vldTime;
+
+        return $this;
     }
 
     /**
      * @param $clientId string
+     * @return MitakeMessage
      */
     public function clientId($clientId)
     {
         $this->clientId = $clientId;
+
+        return $this;
     }
 }
