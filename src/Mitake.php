@@ -75,7 +75,7 @@ class Mitake
                 'username' => $this->username,
                 'password' => $this->password,
                 'dstaddr' => $params['dstaddr'],
-                'smbody' => urlencode($params['smbody'])
+                'smbody' => $params['smbody']
             ];
             if (isset($params['vldtime'])) {
                 $formParams["vldtime"] = $params['vldtime'];
