@@ -35,7 +35,7 @@ class MitakeChannel
         }
 
         if (!isset($message->to)) {
-            if (! $to = $notifiable->routeNotificationFor('mitake', $notification)) {
+            if (!$to = $notifiable->routeNotificationFor('mitake', $notification)) {
                 return;
             }
 
@@ -45,6 +45,7 @@ class MitakeChannel
         return $this->mitake->send([
             'dstaddr' => $message->to,
             'smbody' => trim($message->content),
+            'dlvtime' => $message->dlvTime,
             'vldtime' => $message->vldTime,
             'clientid' => $message->clientId
         ]);

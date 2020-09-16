@@ -11,31 +11,38 @@ class MitakeMessage
      */
     public $content;
 
-    /*
+    /**
      * Recipient's mobile number
      *
      * @var string
      */
     public $to;
 
-    /*
+    /**
+     * Sms Delivery time
+     *
+     * @var string(YYYYMMDDHHMMSS)|integer(second)|null
+     */
+    public $dlvTime;
+
+    /**
      * Validity period
      *
-     * @param $vldtime string(YYYYMMDDHHMMSS)|integer(second)
+     * @var string(YYYYMMDDHHMMSS)|integer(second)|null
      */
     public $vldTime;
 
-    /*
+    /**
      * Check duplicate sending
      *
-     * string
+     * @var string
      */
     public $clientId;
 
     /**
      * Create a new message instance.
      *
-     * @param  string  $content
+     * @param string $content
      * @return void
      */
     public function __construct($content = '')
@@ -46,7 +53,7 @@ class MitakeMessage
     /**
      * Set the message content.
      *
-     * @param  string  $content
+     * @param string $content
      * @return $this
      */
     public function content($content)
@@ -63,6 +70,17 @@ class MitakeMessage
     public function to($to)
     {
         $this->to = $to;
+
+        return $this;
+    }
+
+    /**
+     * @param $dlvTime string|integer
+     * @return MitakeMessage
+     */
+    public function dlvTime($dlvTime)
+    {
+        $this->dlvTime = $dlvTime;
 
         return $this;
     }

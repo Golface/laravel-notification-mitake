@@ -77,6 +77,9 @@ class Mitake
                 'dstaddr' => $params['dstaddr'],
                 'smbody' => $params['smbody']
             ];
+            if (isset($params['dlvtime'])) {
+                $formParams['dlvtime'] = $params['dlvtime'];
+            }
             if (isset($params['vldtime'])) {
                 $formParams["vldtime"] = $params['vldtime'];
             }
