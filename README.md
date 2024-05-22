@@ -2,11 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/natsumework/laravel-notification-mitake.svg?style=flat-square)](https://packagist.org/packages/natsumework/laravel-notification-mitake)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/natsumework/laravel-notification-mitake/master.svg?style=flat-square)](https://travis-ci.org/natsumework/laravel-notification-mitake)
-[![StyleCI](https://styleci.io/repos/:style_ci_id/shield)](https://styleci.io/repos/:style_ci_id)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/:sensio_labs_id.svg?style=flat-square)](https://insight.sensiolabs.com/projects/:sensio_labs_id)
-[![Quality Score](https://img.shields.io/scrutinizer/g/natsumework/laravel-notification-mitake.svg?style=flat-square)](https://scrutinizer-ci.com/g/natsumework/laravel-notification-mitake)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/natsumework/laravel-notification-mitake/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/natsumework/laravel-notification-mitake/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/natsumework/laravel-notification-mitake.svg?style=flat-square)](https://packagist.org/packages/natsumework/laravel-notification-mitake)
 
 This package(non-official) makes it easy to send notifications using [Mitake](https://sms.mitake.com.tw/common/index.jsp) with Laravel 5.5+ and 6.x and 7.x
