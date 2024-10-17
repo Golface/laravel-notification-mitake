@@ -3,6 +3,8 @@
 namespace NotificationChannels\Mitake;
 
 use GuzzleHttp\Client;
+use Illuminate\Notifications\ChannelManager;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\ServiceProvider;
 
 class MitakeServiceProvider extends ServiceProvider
@@ -29,5 +31,11 @@ class MitakeServiceProvider extends ServiceProvider
                     config('services.mitake.url')
                 );
             });
+
+        Notification::resolved(function (ChannelManager $service) {
+            $service->extend('mitake', function ($app) {
+                return $app->make(MitakeChannel::class);
+            });
+        });
     }
 }
